@@ -33,8 +33,8 @@ main = xmonad $ gnomeConfig
     , layoutHook = myTiled ||| myTabbed
     , manageHook = composeAll $
         [ manageHook gnomeConfig
-        , resource =? "Do" --> doFloat  -- gnome do
-        , isFullscreen --> doFullFloat  -- don't interfere with fullscreen video
+        , resource =? "Do" --> doIgnore  --gnome do
+        , isFullscreen --> doFullFloat  --don't interfere with fullscreen video
         , className =? "Unity-2d-panel" --> doIgnore
         , className =? "Unity-2d-shell" --> doIgnore
         ]
