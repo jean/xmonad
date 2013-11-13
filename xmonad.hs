@@ -21,9 +21,9 @@ import XMonad.Layout.BoringWindows
 myTiled = subTabbed $ windowNavigation $ smartBorders $ boringWindows $ desktopLayoutModifiers $ tiled
   where
     tiled = Tall nmaster delta ratio --partitions the screen into two panes
-    nmaster = 1 -- default numer of windows in the master pane
+    nmaster = 1 -- default number of windows in the master pane
     ratio = 1/2 -- default proportion of screen occupied by master pane
-    delta = 3/100 -- percent of screen to incrememnt by when resizing panes
+    delta = 3/100 -- percent of screen to increment by when resizing panes
 
 myTabbed = windowNavigation $ smartBorders $ boringWindows $ desktopLayoutModifiers $ simpleTabbed
 
